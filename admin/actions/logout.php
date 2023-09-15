@@ -1,5 +1,5 @@
 <?php 
-include('../modules/db-connect.php');
+include('../core/db-connect.php');
 
 $_SESSION['success'] = true;
 $_SESSION['message'] = "Successfully logout !!!";

@@ -1,4 +1,4 @@
 <?php
-include('admin/modules/db-connect.php');
+include('admin/core/db-connect.php');
 include('head-content.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-include('../modules/db-connect.php');
+include('../core/db-connect.php');
 if (isset($_GET['id'])) {
     $id = isset($_GET['id']) ? $_GET['id'] : '';
     $ret = delete('DELETE FROM category where id = '.$id,$connection);

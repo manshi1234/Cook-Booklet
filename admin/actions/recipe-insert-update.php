@@ -1,5 +1,5 @@
 <?php
-include('../modules/db-connect.php');
+include('../core/db-connect.php');
 if (isset($_POST['recipe_submit'])) {
     $id = isset($_POST['id']) ? $_POST['id'] : '';
     $action_type = isset($_POST['action_type']) ? $_POST['action_type'] : '';

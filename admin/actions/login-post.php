@@ -1,5 +1,5 @@
 <?php
-include('../modules/db-connect.php');
+include('../core/db-connect.php');
 if (isset($_POST)) {
 
     $username = isset($_POST['username']) ? $_POST['username'] : '';

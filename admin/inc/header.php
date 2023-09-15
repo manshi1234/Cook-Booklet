@@ -1,5 +1,5 @@
 <?php
-include('modules/db-connect.php');
+include('core/db-connect.php');
 if(!isset($_SESSION['logged_in'])){
     header('Location:'.HOME_URL.'admin/login.php');
     exit;
