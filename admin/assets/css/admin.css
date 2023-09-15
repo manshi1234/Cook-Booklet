@@ -486,6 +486,11 @@ a.recipe-delete-btn {
   color: black;
 }
 
+.category-table{
+    min-width: 400px !important;
+    overflow: scroll;
+}
+
 @media(max-width: 1240px){
   section.sidebar .logo-details {padding: 0;text-align: left;width: 60px;}
 
