@@ -1,7 +1,7 @@
 <?php include 'inc/header.php';?>
 
 
-<?php if(isset($_SESSION['type']) && $_SESSION['type']=='admin'){
+<?php if(isset($_SESSION['type']) && $_SESSION['type']=='user'){
     die('Unauthorized Access');
 }?>
     <div class="home-content">
