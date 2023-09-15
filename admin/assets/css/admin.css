@@ -1,0 +1,495 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* sidebar */
+section.sidebar{
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  background: #0A2558;
+  transition: all 0.5s ease;
+}
+
+section.sidebar.active{
+  width: 60px;
+}
+
+section.sidebar .logo-details{
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+section.sidebar .logo-details i{
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center
+}
+
+section.sidebar .logo-details img {
+  width: 150px;
+}
+
+section.sidebar .nav-links{
+  margin-top: 10px;
+}
+
+section.sidebar .nav-links li{
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+
+section.sidebar .nav-links li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+section.sidebar .nav-links li a.active{
+  background: #081D45;
+}
+
+section.sidebar .nav-links li a:hover{
+  background: #081D45;
+}
+
+section.sidebar .nav-links li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+section.sidebar .nav-links li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+section.sidebar .nav-links .log_out{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* home */
+.home-section{
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.home-section nav{
+  display: flex;
+  justify-content: end;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 240px);
+  left: 240px;
+  z-index: 100;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  justify-content: space-between;
+}
+.sidebar.active ~ .home-section nav{
+  left: 60px;
+  width: calc(100% - 60px);
+}
+.home-section nav .sidebar-button{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+nav .sidebar-button i{
+  font-size: 35px;
+  margin-right: 10px;
+}
+
+
+.home-section nav .profile-details{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 0 0 2px;
+}
+nav .profile-details img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f3f3f3;
+  padding: 3px;
+}
+nav .profile-details .admin_name{
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+}
+nav .profile-details i{
+  font-size: 20px;
+  color: #333;
+}
+
+
+
+/* dashboard */
+.home-section .home-content{
+  position: relative;
+  padding-top: 104px;
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+.overview-boxes .box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(100% / 3 - 15px);
+  background: #fff;
+  padding: 15px 14px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.overview-boxes .box-topic{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.home-content .box .number{
+  display: inline-block;
+  font-size: 22px;
+  margin-top: -6px;
+  font-weight: 400;
+}
+
+.home-content .box .indicator .text{
+  font-size: 12px;
+}
+.home-content .box .cart{
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 50px;
+  background: #cce5ff;
+  line-height: 50px;
+  text-align: center;
+  color: #66b0ff;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+.home-content .box .cart.two{
+   color: #2BD47D;
+   background: #C0F2D8;
+ }
+.home-content .box .cart.three{
+   color: #ffc233;
+   background: #ffe8b3;
+ }
+
+.home-content .total-order{
+  font-size: 20px;
+  font-weight: 500;
+}
+.home-content .sales-boxes{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 20px; */
+}
+
+.home-section .category-content {
+  position: relative;
+  padding-top: 104px;
+}
+
+.home-content-title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+}
+
+.home-content-title h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.home-content-title a {
+  background: #0a2558;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.category-table {
+  padding: 0 30px;
+}
+
+
+
+.category-table td img{
+  width: 50px;
+}
+
+.recipe-action a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+}
+
+a.recipe-delete-btn {
+  color: #b71f1f;
+}
+
+
+
+
+/* category form */
+.category-form-box {
+  background: white;
+  padding: 30px;
+  max-width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.category-form-box h1 {
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.category-form-box .input-box {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 0;
+}
+
+.category-form-box .input-box input {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+}
+
+.category-form-box .input-box label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.category-form-box .input-box select {
+  background: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 9px;
+}
+
+.category-form-box .input-box.add-btn input {
+  background: #0a2558;
+  color: white;
+  cursor: pointer;
+}
+
+.category-form-box .input-box.add-btn input:hover {
+  background: #0a2558e0;
+}
+
+
+
+
+
+
+/* user form */
+.user-form-box {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.user-form-box h1 {
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.user-form-box .input-box {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 0;
+}
+
+.user-form-box .input-box input {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+}
+
+.user-form-box .input-box label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.user-form-box .input-box select {
+  background: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 9px;
+}
+
+.user-form-box .input-box.add-btn input {
+  background: #0a2558;
+  color: white;
+  cursor: pointer;
+}
+
+.user-form-box .input-box.add-btn input:hover {
+  background: #0a2558e0;
+}
+
+
+
+
+/* recipe form */
+.recipe-form-box {
+  background: white;
+  padding: 30px;
+  width: 80%;
+  margin: 0 20px;
+}
+
+.recipe-form-box h1 {
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.recipe-form-box .input-box {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 0;
+}
+
+.recipe-form-box .input-box input {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  outline: none;
+  background: whitesmoke;
+}
+
+.recipe-form-box .input-box label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.recipe-form-box .input-box select {
+  background: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 9px;
+}
+
+.recipe-form-box .input-box.add-btn input {
+  background: #0a2558;
+  color: white;
+  cursor: pointer;
+  width: 200px;
+}
+
+.recipe-form-box .input-box.add-btn input:hover {
+  background: #0a2558e0;
+}
+
+.recipe-form-box .input-box textarea {
+  background: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 9px;
+}
+
+.recipe-form-box .input-box.featured-input label {
+  display: inline-block;
+}
+
+.recipe-form-box .input-box.featured-input {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.success-msg{
+  margin-bottom:10px;
+  color:green;
+}
+
+.error-msg{
+  margin-bottom:10px;
+  color:red;
+}
+.admin_name a {
+  background: #4bca88;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 11px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.input-box span {
+  font-size: 12px;
+  color: #ae1414;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.overview-boxes .box .right-side a {
+  text-decoration: none;
+  color: black;
+}
+
+@media(max-width: 1240px){
+  section.sidebar .logo-details {padding: 0;text-align: left;width: 60px;}
+
+  .logo-details img {
+      width: 50px !important;
+  }
+}
